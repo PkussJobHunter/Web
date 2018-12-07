@@ -33,7 +33,7 @@ class RegisterForm(FlaskForm):
 class LoginForm(FlaskForm):
     username = StringField('用户名或邮箱', validators=[DataRequired(message='用户名不能为空')])
     password = PasswordField('密码', validators=[DataRequired(message='密码不能为空')])
-    remember = BooleanField('记住我',default=True)
+    remember = BooleanField('记住我', default=True)
     submit = SubmitField('登录')
 
 
@@ -77,17 +77,18 @@ class EmailForm(FlaskForm):
 # 用来提交用户名或邮箱来重置密码
 class EUForm(FlaskForm):
     username = StringField('用户名或有效的邮箱', validators=[DataRequired(message='用户名不能为空')])
-    submit = SubmitField('下一步',render_kw={'style':"float: right"})
+    submit = SubmitField('下一步', render_kw={'style': "float: right"})
+
 
 # 用来提交验证码
 class AuthCodeForm(FlaskForm):
     authcode = StringField('验证码', validators=[DataRequired(message='验证码不能为空')])
-    submit = SubmitField('提交',render_kw={'style':"float: right"})
+    submit = SubmitField('提交', render_kw={'style': "float: right"})
 
 
-#重置密码
+# 重置密码
 class ResetPwdForm(FlaskForm):
     password = PasswordField('新密码', validators=[DataRequired(message='请填写密码'), Length(8, 20, message='密码长度在8到20之间'),
-                                               EqualTo('confirm', message='密码不一致')])
+                                                EqualTo('confirm', message='密码不一致')])
     confirm = PasswordField('密码确认')
-    submit = SubmitField('确定',render_kw={'style':"float: right"})
+    submit = SubmitField('确定', render_kw={'style': "float: right"})

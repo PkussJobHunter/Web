@@ -10,9 +10,7 @@ def config_errorhandler(app):
     # 定制全局404错误页面
     @app.errorhandler(404)
     def page_not_found(e):
-        return render_template('error/404.html',e=e)
-
-
+        return render_template('error/404.html', e=e)
 
 
 # 将创建app的动作封装成一个函数
@@ -24,8 +22,7 @@ def create_app(config_name):
     # 执行额外的初始化
     config.get(config_name).init_app(app)
 
-
-    #设置debug=True,让toolbar生效
+    # 设置debug=True,让toolbar生效
     app.debug = True
 
     # 加载扩展

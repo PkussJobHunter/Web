@@ -24,17 +24,17 @@ class Config:
     MAIL_USE_TLS = False
 
     CACHE_TYPE = 'redis'
-    CACHE_REDIS_HOST =  '127.0.0.1'
+    CACHE_REDIS_HOST = '127.0.0.1'
     CACHE_REDIS_PORT = 6379
     CACHE_REDIS_DB = ''
     CACHE_REDIS_PASSWORD = ''
 
-    CACHE_TYPE =  'redis'
+    CACHE_TYPE = 'redis'
 
-
-    #文件上传的位置
+    # 文件上传的位置
     MAX_CONTENT_LENGTH = 8 * 1024 * 1024
     UPLOADED_PHOTOS_DEST = os.path.join(BASE_DIR, 'static/uploads')
+
     # 额外的初始化操作
     @staticmethod
     def init_app(app):
@@ -56,7 +56,6 @@ class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:123456@localhost/app'
 
 
-
 # 生成一个字典，用来根据字符串找到对应的配置类。
 config = {
     'development': DevelopmentConfig,
@@ -64,4 +63,3 @@ config = {
     'production': ProductionConfig,
     'default': DevelopmentConfig
 }
-
