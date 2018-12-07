@@ -1,6 +1,5 @@
 import os
 
-# BASE_DIR = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 
@@ -16,13 +15,21 @@ class Config:
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
 
     # 发邮件 配置
-    MAIL_SERVER = os.environ.get('MAIL_SERVER') or 'smtp.qq.com'
-    MAIL_USERNAME = os.environ.get('MAIL_USERNAME') or '1825514258@qq.com'
-    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD') or 'lhyjeyaywqfdegeg'
+    MAIL_SERVER = os.environ.get('MAIL_SERVER') or ''
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME') or ''
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD') or ''
     MAIL_USE_SSL = True
     MAIL_SUPPRESS_SEND = False
     MAIL_PORT = 465
     MAIL_USE_TLS = False
+
+    CACHE_TYPE = 'redis'
+    CACHE_REDIS_HOST =  '127.0.0.1'
+    CACHE_REDIS_PORT = 6379
+    CACHE_REDIS_DB = ''
+    CACHE_REDIS_PASSWORD = ''
+
+    CACHE_TYPE =  'redis'
 
 
     #文件上传的位置

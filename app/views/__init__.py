@@ -1,10 +1,11 @@
 from .main import main
 from .users import users
+from .api import api
 
 DEFAULT_BLUEPRINT = (
     (main, ''),
-    (users,'/users')
-
+    (users,'/users'),
+    (api, '/api')
 )
 
 

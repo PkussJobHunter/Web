@@ -22,7 +22,7 @@ toolbar = DebugToolbarExtension()
 #富文本
 ckeditor = CKEditor()
 #缓存页面
-# cache=Cache()
+cache = Cache()
 
 # 初始化
 def config_extensions(app):
@@ -33,7 +33,7 @@ def config_extensions(app):
     moment.init_app(app)
     login_manager.init_app(app)
     toolbar.init_app(app)
-    # cache.init_app(app,config={'CACHE_TYPE':'redis'})
+    cache.init_app(app)
 
     # ckeditor.init_app(app)
     #一些图片上传的配置
