@@ -36,6 +36,58 @@ module.exports = function (grunt) { // jshint ignore:line
         }
       }
     },
+    cachebuster: {
+        build: {
+            options: {
+                format: 'json',
+                basedir: 'static/'
+            },
+            src: [
+                'bower_components/bootstrap/dist/js/bootstrap.min.js',
+                'bower_components/bootstrap/dist/css/bootstrap.min.css',
+                'bower_components/font-awesome/css/font-awesome.min.css',
+                'bower_components/Ionicons/css/ionicons.min.css',
+                'bower_components/fullcalendar/dist/fullcalendar.min.css',
+                'bower_components/fullcalendar/dist/fullcalendar.print.min.css',
+                'dist/css/AdminLTE.min.css',
+                'dist/css/skins/_all-skins.min.css',
+                'dist/css/alt/AdminLTE-bootstrap-social.css',
+                'dist/css/alt/AdminLTE-fullcalendar.css',
+                'dist/js/demo.js',
+                'bower_components/fullcalendar/dist/fullcalendar.min.js',
+                'bower_components/fastclick/lib/fastclick.js',
+                'dist/js/adminlte.min.js',
+                'plugins/bootstrap-slider/bootstrap-slider.js',
+                'bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js',
+                'bower_components/datatables.net/js/jquery.dataTables.min.js',
+                'plugins/iCheck/icheck.min.js',
+                'plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js',
+                'bower_components/jquery-sparkline/dist/jquery.sparkline.min.js',
+                'plugins/jvectormap/jquery-jvectormap-1.2.2.min.js',
+                'plugins/jvectormap/jquery-jvectormap-world-mill-en.js',
+                'bower_components/jquery-slimscroll/jquery.slimscroll.min.js',
+                'bower_components/chart.js/Chart.js',
+                'dist/js/pages/dashboard2.js',
+                'bower_components/ckeditor/ckeditor.js',
+                'plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js',
+                'bower_components/select2/dist/js/select2.full.min.js',
+                'plugins/input-mask/jquery.inputmask.js',
+                'plugins/input-mask/jquery.inputmask.date.extensions.js',
+                'plugins/input-mask/jquery.inputmask.extensions.js',
+                'bower_components/moment/min/moment.min.js',
+                'bower_components/bootstrap-daterangepicker/daterangepicker.js',
+                'bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
+                'bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js',
+                'plugins/timepicker/bootstrap-timepicker.min.js',
+                'bower_components/Flot/jquery.flot.categories.js',
+                'bower_components/Flot/jquery.flot.pie.js',
+                'bower_components/Flot/jquery.flot.resize.js',
+                'bower_components/Flot/jquery.flot.js',
+                'bower_components/fullcalendar/dist/fullcalendar.min.js'
+            ],
+            dest: 'target/cachebusters.json'
+        }
+    },
     // 'less'-task configuration
     // This task will compile all less files upon saving to create both AdminLTE.css and AdminLTE.min.css
     less  : {
@@ -298,6 +350,8 @@ module.exports = function (grunt) { // jshint ignore:line
   grunt.loadNpmTasks('grunt-notify');
   // Replace
   grunt.loadNpmTasks('grunt-text-replace');
+  //version
+  grunt.loadNpmTasks('grunt-cachebuster');
 
   // Linting task
   grunt.registerTask('lint', ['jshint', 'csslint', 'bootlint']);
@@ -305,6 +359,8 @@ module.exports = function (grunt) { // jshint ignore:line
   grunt.registerTask('js', ['concat', 'uglify']);
   // CSS Task
   grunt.registerTask('css', ['less:development', 'less:production', 'replace']);
+  // cahce Task
+  grunt.registerTask('cache', ['cachebuster']);
 
   // The default task (running 'grunt' in console) is 'watch'
   grunt.registerTask('default', ['watch']);

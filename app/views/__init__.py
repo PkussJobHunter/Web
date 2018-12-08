@@ -1,11 +1,23 @@
 from .main import main
 from .users import users
 from .api import api
+from .pages import pages
+from .pages.calendar import *
+from .pages.index import *
+from .pages.charts import *
+from .pages.examples import *
+from .pages.forms import *
+from .pages.layout import *
+from .pages.mailbox import *
+from .pages.tables import *
+from .pages.ui import *
+from .pages.widgets import *
 
 DEFAULT_BLUEPRINT = (
     (main, ''),
     (users,'/users'),
-    (api, '/api')
+    (api, '/api'),
+    (pages, '/pages')
 )
 
 

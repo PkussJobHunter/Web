@@ -9,5 +9,5 @@ main = Blueprint('main', __name__)
 @main.route('/', methods=['GET', 'POST'])
 # @cache.cached(timeout=90, key_prefix='post')
 def index():
-    return render_template('pages/index/index.html')
+    return render_template('pages/index/index.html', )
     pass

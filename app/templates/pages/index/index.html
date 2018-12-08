@@ -2,7 +2,6 @@
 {% block css %}
     <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="{{ url_for('static', filename = 'dist/css/skins/_all-skins.min.css')}}">
   <!-- Morris chart -->
   <link rel="stylesheet" href="{{ url_for('static', filename = 'bower_components/morris.js/morris.css')}}">
   <!-- jvectormap -->
@@ -533,8 +532,6 @@
     <!-- /.content -->
 {% endblock %}
 {% block js %}
-    <!-- Bootstrap 3.3.7 -->
-<script src="{{ url_for('static', filename = 'bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- Morris.js charts -->
 <script src="{{ url_for('static', filename = 'bower_components/raphael/raphael.min.js')}}"></script>
 <script src="{{ url_for('static', filename = 'bower_components/morris.js/morris.min.js')}}"></script>

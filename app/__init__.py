@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from app.config import config
 from app.extensions import config_extensions
 from app.views import config_blueprint
+from app.utils import version
 
 
 def config_errorhandler(app):
@@ -34,5 +35,7 @@ def create_app(config_name):
     # 配置全局错误处理
     config_errorhandler(app)
 
+    env = app.jinja_env
+    env.filters['version'] = version
     # 返回app实例对象
     return app
