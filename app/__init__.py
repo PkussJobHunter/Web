@@ -23,7 +23,7 @@ def create_app(config_name):
     config.get(config_name).init_app(app)
 
     # 设置debug=True,让toolbar生效
-    app.debug = True
+    app.debug = False
 
     # 加载扩展
     config_extensions(app)

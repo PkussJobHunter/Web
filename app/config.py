@@ -31,6 +31,8 @@ class Config:
 
     CACHE_TYPE = 'redis'
 
+    
+
     # 文件上传的位置
     MAX_CONTENT_LENGTH = 8 * 1024 * 1024
     UPLOADED_PHOTOS_DEST = os.path.join(BASE_DIR, 'static/uploads')
