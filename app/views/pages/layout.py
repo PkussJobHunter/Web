@@ -11,7 +11,7 @@ def boxed():
 @pages.route('/layout/sidebar', methods=['GET', 'POST'])
 # @cache.cached(timeout=90, key_prefix='post')
 def sidebar():
-    return render_template('pages/layout/sidebar.html')
+    return render_template('pages/layout/collapsed-sidebar.html')
     pass
 
 @pages.route('/layout/fixed', methods=['GET', 'POST'])
@@ -23,5 +23,5 @@ def fixed():
 @pages.route('/layout/nav', methods=['GET', 'POST'])
 # @cache.cached(timeout=90, key_prefix='post')
 def nav():
-    return render_template('pages/layout/nav.html')
+    return render_template('pages/layout/top-nav.html')
     pass

@@ -1,7 +1,7 @@
 {% extends "pages/base.html" %}
 {% block css %}
     <!-- DataTables -->
-  <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') | version }}">
   <!-- Theme style -->
 {% endblock %}
 {% block content %}

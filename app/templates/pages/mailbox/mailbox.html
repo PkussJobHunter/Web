@@ -1,7 +1,7 @@
 {% extends "pages/base.html" %}
 {% block css %}
     <!-- iCheck -->
-  <link rel="stylesheet" href="../../plugins/iCheck/flat/blue.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'plugins/iCheck/flat/blue.css') | version }}">
 {% endblock %}
 {% block content %}
     <!-- Content Header (Page header) -->
@@ -281,14 +281,15 @@
 {% endblock %}
 {% block js %}
     <!-- Slimscroll -->
-<script src="{{ url_for('static', filename = 'bower_components/bootstrap/dist/css/bootstrap.min.css') | version }}../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="{{ url_for('static', filename = 'bower_components/bootstrap/dist/css/bootstrap.min.css') | version }}../../bower_components/fastclick/lib/fastclick.js"></script>
+<script src="{{ url_for('static', filename = 'bower_components/jquery-slimscroll/jquery.slimscroll.min.js') | version }}"></script>
+  <!-- FastClick -->
+<script src="{{ url_for('static', filename = 'bower_components/fastclick/lib/fastclick.js') | version }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ url_for('static', filename = 'bower_components/bootstrap/dist/css/bootstrap.min.css') | version }}../../dist/js/adminlte.min.js"></script>
-<!-- iCheck -->
-<script src="{{ url_for('static', filename = 'bower_components/bootstrap/dist/css/bootstrap.min.css') | version }}../../plugins/iCheck/icheck.min.js"></script>
+<script src="{{ url_for('static', filename = 'dist/js/adminlte.min.js') | version }}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{ url_for('static', filename = 'dist/js/demo.js') | version }}"></script>
 <!-- Page Script -->
+    <script src="{{ url_for('static', filename = 'plugins/iCheck/icheck.min.js') | version }}"></script>
 <script>
   $(function () {
     //Enable iCheck plugin for checkboxes

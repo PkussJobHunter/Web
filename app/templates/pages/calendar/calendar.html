@@ -1,8 +1,8 @@
 {% extends "pages/base.html" %}
 {% block css %}
      <!-- fullCalendar -->
-  <link rel="stylesheet" href="{{ url_for('static', filename = 'bower_components/bootstrap/dist/css/bootstrap.min.css') | version }}../bower_components/fullcalendar/dist/fullcalendar.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename = 'bower_components/bootstrap/dist/css/bootstrap.min.css') | version }}../bower_components/fullcalendar/dist/fullcalendar.print.min.css" media="print">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'bower_components/fullcalendar/dist/fullcalendar.min.css') | version }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'bower_components/fullcalendar/dist/fullcalendar.print.min.css') | version }}" media="print">
   <!-- Theme style -->
 {% endblock %}
 {% block content %}

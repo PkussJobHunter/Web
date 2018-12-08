@@ -1,12 +1,12 @@
 {% extends "pages/base.html" %}
 {% block css %}
     <!-- iCheck -->
-  <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'plugins/iCheck/square/blue.css') | version }}">
 {% endblock %}
 {% block content %}
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a href="/pages/index2.html"><b>Admin</b>LTE</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

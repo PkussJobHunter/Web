@@ -1,7 +1,7 @@
 {% extends "pages/base.html" %}
 {% block css %}
      <!-- bootstrap slider -->
-  <link rel="stylesheet" href="../../plugins/bootstrap-slider/slider.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'plugins/bootstrap-slider/slider.css') | version }}">
 {% endblock %}
 {% block content %}
     <!-- Content Header (Page header) -->
