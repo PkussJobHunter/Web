@@ -29,10 +29,6 @@ class Config:
     CACHE_REDIS_DB = ''
     CACHE_REDIS_PASSWORD = ''
 
-    CACHE_TYPE = 'redis'
-
-    
-
     # 文件上传的位置
     MAX_CONTENT_LENGTH = 8 * 1024 * 1024
     UPLOADED_PHOTOS_DEST = os.path.join(BASE_DIR, 'static/uploads')
@@ -45,17 +41,35 @@ class Config:
 
 # 开发环境配置
 class DevelopmentConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:123456@localhost/app'
+    driver = 'mysql'
+    library = 'pymysql'
+    username = 'root'
+    password = '123456'
+    host = 'localhost'
+    database = 'app'
+    SQLALCHEMY_DATABASE_URI = driver +'+' + library + '://' + username + ':' + password + '@' + host +'/' + database
 
 
 # 测试环境配置
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:123456@localhost/app'
+    driver = 'mysql'
+    library = 'pymysql'
+    username = 'root'
+    password = '123456'
+    host = 'localhost'
+    database = 'app'
+    SQLALCHEMY_DATABASE_URI = driver + '+' + library + '://' + username + ':' + password + '@' + host + '/' + database
 
 
 # 生产环境
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:123456@localhost/app'
+    driver = 'mysql'
+    library = 'pymysql'
+    username = 'root'
+    password = '123456'
+    host = 'localhost'
+    database = 'app'
+    SQLALCHEMY_DATABASE_URI = driver + '+' + library + '://' + username + ':' + password + '@' + host + '/' + database
 
 
 # 生成一个字典，用来根据字符串找到对应的配置类。
