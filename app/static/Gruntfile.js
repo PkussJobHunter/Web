@@ -88,7 +88,7 @@ module.exports = function (grunt) { // jshint ignore:line
                 'plugins/bootstrap-slider/slider.css',
 
                 'bower_components/bootstrap-daterangepicker/daterangepicker.js',
-                 'plugins/jvectormap/jquery-jvectormap-world-mill-en.js',
+                'plugins/jvectormap/jquery-jvectormap-world-mill-en.js',
                 'bower_components/fastclick/lib/fastclick.js',
                 'plugins/bootstrap-slider/bootstrap-slider.js',
                 'bower_components/chart.js/Chart.js',
@@ -135,7 +135,13 @@ module.exports = function (grunt) { // jshint ignore:line
           // Separate plugins
           'dist/css/alt/AdminLTE-select2.min.css'         : 'build/less/select2.less',
           'dist/css/alt/AdminLTE-fullcalendar.min.css'    : 'build/less/fullcalendar.less',
-          'dist/css/alt/AdminLTE-bootstrap-social.min.css': 'build/less/bootstrap-social.less'
+          'dist/css/alt/AdminLTE-bootstrap-social.min.css': 'build/less/bootstrap-social.less',
+            'plugins/iCheck/square/blue.min.css' : 'plugins/iCheck/square/blue.css',
+            'plugins/iCheck/all.min.css' : 'plugins/iCheck/all.css',
+            'bower_components/morris.js/morris.min.css' : 'bower_components/morris.js/morris.css',
+            'bower_components/jvectormap/jquery-jvectormap.min.css' : 'bower_components/jvectormap/jquery-jvectormap.css',
+            'bower_components/bootstrap-daterangepicker/daterangepicker.min.css' : 'bower_components/bootstrap-daterangepicker/daterangepicker.css',
+            'plugins/bootstrap-slider/slider.min.css' : 'plugins/bootstrap-slider/slider.css'
         }
       },
       // Non minified skin files
@@ -187,7 +193,22 @@ module.exports = function (grunt) { // jshint ignore:line
       },
       production: {
         files: {
-          'dist/js/adminlte.min.js': ['dist/js/adminlte.js']
+            'dist/js/adminlte.min.js': ['dist/js/adminlte.js'],
+            'bower_components/bootstrap-daterangepicker/daterangepicker.min.js' : ['bower_components/bootstrap-daterangepicker/daterangepicker.js'],
+            'plugins/jvectormap/jquery-jvectormap-world-mill-en.min.js' : ['plugins/jvectormap/jquery-jvectormap-world-mill-en.js'],
+            'bower_components/fastclick/lib/fastclick.min.js' : ['bower_components/fastclick/lib/fastclick.js'],
+            'plugins/bootstrap-slider/bootstrap-slider.min.js' : ['plugins/bootstrap-slider/bootstrap-slider.js'],
+            'bower_components/chart.js/Chart.min.js' : ['bower_components/chart.js/Chart.js'],
+            'dist/js/pages/dashboard2.min.js' : ['dist/js/pages/dashboard2.js'],
+            'bower_components/ckeditor/ckeditor.min.js' : ['bower_components/ckeditor/ckeditor.js'],
+            'plugins/input-mask/jquery.inputmask.min.js' : ['plugins/input-mask/jquery.inputmask.js'],
+            'plugins/input-mask/jquery.inputmask.date.extensions.min.js' : ['plugins/input-mask/jquery.inputmask.date.extensions.js'],
+            'plugins/input-mask/jquery.inputmask.extensions.min.js' : ['plugins/input-mask/jquery.inputmask.extensions.js'],
+            'bower_components/Flot/jquery.flot.categories.min.js' : ['bower_components/Flot/jquery.flot.categories.js'],
+            'bower_components/Flot/jquery.flot.pie.min.js' : ['bower_components/Flot/jquery.flot.pie.js'],
+            'bower_components/Flot/jquery.flot.resize.min.js' : ['ower_components/Flot/jquery.flot.resize.js'],
+            'bower_components/Flot/jquery.flot.min.js' : ['bower_components/Flot/jquery.flot.js'],
+            'dist/js/demo.min.js' : ['dist/js/demo.js']
         }
       }
     },
