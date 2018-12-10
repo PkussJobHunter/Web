@@ -81,13 +81,13 @@
 {% endblock %}
 {% block js %}
    <!-- FastClick -->
-<script src="{{ url_for('static', filename = 'bower_components/fastclick/lib/fastclick.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'bower_components/fastclick/lib/fastclick.min.js') | version }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ url_for('static', filename = 'dist/js/adminlte.min.js') | version }}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{ url_for('static', filename = 'dist/js/demo.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'dist/js/demo.min.js') | version }}"></script>
 <!-- CK Editor -->
-<script src="{{ url_for('static', filename = 'bower_components/ckeditor/ckeditor.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'bower_components/ckeditor/ckeditor.min.js') | version }}"></script>
 <!-- Bootstrap WYSIHTML5 -->
 <script src="{{ url_for('static', filename = 'plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') | version }}"></script>
 <script>

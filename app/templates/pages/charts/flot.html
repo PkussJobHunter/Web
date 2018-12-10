@@ -141,19 +141,19 @@
 {% endblock %}
 {% block js %}
    <!-- FastClick -->
-<script src="{{ url_for('static', filename = 'bower_components/fastclick/lib/fastclick.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'bower_components/fastclick/lib/fastclick.min.js') | version }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ url_for('static', filename = 'dist/js/adminlte.min.js') | version }}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{ url_for('static', filename = 'dist/js/demo.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'dist/js/demo.min.js') | version }}"></script>
 <!-- FLOT CHARTS -->
-<script src="{{ url_for('static', filename = 'bower_components/Flot/jquery.flot.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'bower_components/Flot/jquery.flot.min.js') | version }}"></script>
 <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
-<script src="{{ url_for('static', filename = 'bower_components/Flot/jquery.flot.resize.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'bower_components/Flot/jquery.flot.resize.min.js') | version }}"></script>
 <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
-<script src="{{ url_for('static', filename = 'bower_components/Flot/jquery.flot.pie.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'bower_components/Flot/jquery.flot.pie.min.js') | version }}"></script>
 <!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
-<script src="{{ url_for('static', filename = 'bower_components/Flot/jquery.flot.categories.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'bower_components/Flot/jquery.flot.categories.min.js') | version }}"></script>
 <!-- Page script -->
 <script>
   $(function () {

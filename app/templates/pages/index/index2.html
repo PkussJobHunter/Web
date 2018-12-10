@@ -843,20 +843,20 @@
 {% endblock %}
 {% block js %}
     <!-- FastClick -->
-<script src="{{ url_for('static', filename = 'bower_components/fastclick/lib/fastclick.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'bower_components/fastclick/lib/fastclick.min.js') | version }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ url_for('static', filename = 'dist/js/adminlte.min.js') | version }}"></script>
 <!-- Sparkline -->
 <script src="{{ url_for('static', filename = 'bower_components/jquery-sparkline/dist/jquery.sparkline.min.js') | version }}"></script>
 <!-- jvectormap  -->
 <script src="{{ url_for('static', filename = 'plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') | version }}"></script>
-<script src="{{ url_for('static', filename = 'plugins/jvectormap/jquery-jvectormap-world-mill-en.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'plugins/jvectormap/jquery-jvectormap-world-mill-en.min.js') | version }}"></script>
 <!-- SlimScroll -->
 <script src="{{ url_for('static', filename = 'bower_components/jquery-slimscroll/jquery.slimscroll.min.js') | version }}"></script>
 <!-- ChartJS -->
-<script src="{{ url_for('static', filename = 'bower_components/chart.js/Chart.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'bower_components/chart.js/Chart.min.js') | version }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ url_for('static', filename = 'dist/js/pages/dashboard2.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'dist/js/pages/dashboard2.min.js') | version }}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{ url_for('static', filename = 'dist/js/demo.js') | version }}"></script>
+<script src="{{ url_for('static', filename = 'dist/js/demo.min.js') | version }}"></script>
 {% endblock %}
